@@ -1,0 +1,96 @@
+@use 'fonts';
+
+$font-title: 'TT Firs Neue', Helvetica, sans-serif;
+$font-text: 'Roboto', Helvetica, sans-serif;
+$color-primary: #FF6E30;
+$color-primary-shade: #BC572B;
+$color-primary-dark: #CE4307;
+$color-dark: #202020;
+$color-darkgray: #333333;
+$color-gray: #4A4A4A;
+$color-grayish: #666666;
+$color-lightgray: #999999;
+$color-light: #CACACA;
+$color-lighter: #E9E9E9;
+$color-white: #FFFFFF;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: $font-text;
+  color: $color-dark;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+  pointer-events: none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin container {
+  margin-inline: auto;
+  padding-inline: 21px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+
+  @media (min-width: 768px) {
+    padding-inline: 27px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 31px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (min-width: 1400px) {
+    padding-inline: calc((100vw - 1290px) / 2);
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@mixin button-reset {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: inherit;
+  text-decoration: none;
+}

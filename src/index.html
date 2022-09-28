@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="fonts/Roboto-Regular.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="fonts/Roboto-Bold.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="fonts/TTFirsNeue-Regular.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="fonts/TTFirsNeue-Bold.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="main.js"></script>
+    <title>Студия High pass</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="top header__top">
+        <img
+          src="img/inline/logo.svg"
+          alt="Логотип High Pass"
+          class="top__logo"
+        />
+        <nav class="nav top__nav top__nav--desktop">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link"> О студии </a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link"> Наши проекты </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Мастер-классы </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link"> Контакты </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="socials top__socials">
+          <li class="socials__item">
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="Наша страница в Instagram"
+            >
+              <img src="img/inline/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="Наша страница в Facebook"
+            >
+              <img src="img/inline/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link" aria-label="Наша страница в VK">
+              <img src="img/inline/vk.svg" alt="VK" />
+            </a>
+          </li>
+        </ul>
+        <button class="top__search js-open-search" aria-label="Открыть поиск">
+          <img src="img/inline/search.svg" alt="Поиск" />
+        </button>
+        <div class="searchbox top__searchbox">
+          <input
+            class="searchbox__input"
+            type="text"
+            placeholder="Что будем искать?"
+            aria-label="Введите поисковый запрос"
+          />
+          <button class="searchbox__close js-close-search" aria-label="Искать">
+            <img src="img/inline/close.svg" alt="Закрыть мобильное меню" />
+          </button>
+        </div>
+      </div>
+      <div class="bottom header__bottom">
+        <button
+          class="burger bottom__burger js-open-burger"
+          aria-label="Открыть меню"
+        >
+          <img
+            src="img/inline/burger.svg"
+            alt="Мобильное меню"
+            class="burger__icon"
+          />
+        </button>
+        <button
+          class="close bottom__close js-close-burger"
+          aria-label="Закрыть меню"
+        >
+          <img
+            src="img/inline/close.svg"
+            alt="Закрыть мобильное меню"
+            class="close__icon"
+          />
+        </button>
+        <nav class="nav bottom__nav bottom__nav--mobile">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link"> О студии </a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link"> Наши проекты </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Мастер-классы </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link"> Контакты </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="tel bottom__tel">
+          <img src="img/inline/tel.svg" alt="Телефон" class="tel__icon" />
+          +7 (495) 42-423-532
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero" id="hero">
+        <h1 class="visually-hidden">Студия High pass</h1>
+        <article class="article hero__article">
+          <picture class="article__image">
+            <source
+              srcset="
+                img/hero-article-1400.webp,
+                img/hero-article-1400@2x.webp 2x
+              "
+              media="(min-width: 1400px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-article-1400.jpg,
+                img/hero-article-1400@2x.jpg 2x
+              "
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="
+                img/hero-article-1024.webp,
+                img/hero-article-1024@2x.webp 2x
+              "
+              media="(min-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-article-1024.jpg,
+                img/hero-article-1024@2x.jpg 2x
+              "
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="
+                img/hero-article-768.webp,
+                img/hero-article-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/hero-article-768.jpg, img/hero-article-768@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/hero-article.webp, img/hero-article@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="img/hero-article.jpg, img/hero-article@2x.jpg 2x" />
+            <img src="img/hero-article-1400.jpg" alt="Фотоаппарат" />
+          </picture>
+          <p class="article__descr">Мастер-класс от Игоря Робова</p>
+          <h3 class="article__title">Неоновый фотосет 2.0</h3>
+          <time class="article__date" datetime="2022-07-07 20:00">
+            7 июля 20:00
+          </time>
+          <button class="article__button">Узнать больше</button>
+          <div class="article__badge">#мастеркласс</div>
+        </article>
+        <div class="photos hero__photos">
+          <h2 class="photos__title">
+            Работы участников предыдущего мастер-класса
+          </h2>
+          <picture class="photos__image photos__image--large">
+            <source
+              srcset="
+                img/hero-photo-1-1400.webp,
+                img/hero-photo-1-1400@2x.webp 2x
+              "
+              media="(min-width: 1400px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-1-1400.jpg,
+                img/hero-photo-1-1400@2x.jpg 2x
+              "
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-1-1024.webp,
+                img/hero-photo-1-1024@2x.webp 2x
+              "
+              media="(min-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-1-1024.jpg,
+                img/hero-photo-1-1024@2x.jpg 2x
+              "
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-1-768.webp,
+                img/hero-photo-1-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/hero-photo-1-768.jpg, img/hero-photo-1-768@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/hero-photo-1.webp, img/hero-photo-1@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="img/hero-photo-1.jpg, img/hero-photo-1@2x.jpg 2x" />
+            <img src="img/hero-photo-1-1400.jpg" alt="Фотография девушки" />
+          </picture>
+          <picture class="photos__image">
+            <source
+              srcset="
+                img/hero-photo-2-1400.webp,
+                img/hero-photo-2-1400@2x.webp 2x
+              "
+              media="(min-width: 1400px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-2-1400.jpg,
+                img/hero-photo-2-1400@2x.jpg 2x
+              "
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-2-1024.webp,
+                img/hero-photo-2-1024@2x.webp 2x
+              "
+              media="(min-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-2-1024.jpg,
+                img/hero-photo-2-1024@2x.jpg 2x
+              "
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-2-768.webp,
+                img/hero-photo-2-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/hero-photo-2-768.jpg, img/hero-photo-2-768@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/hero-photo-2.webp, img/hero-photo-2@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="img/hero-photo-2.jpg, img/hero-photo-2@2x.jpg 2x" />
+            <img src="img/hero-photo-2-1400.jpg" alt="Фотография девушки" />
+          </picture>
+          <picture class="photos__image">
+            <source
+              srcset="
+                img/hero-photo-3-1400.webp,
+                img/hero-photo-3-1400@2x.webp 2x
+              "
+              media="(min-width: 1400px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-3-1400.jpg,
+                img/hero-photo-3-1400@2x.jpg 2x
+              "
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-3-1024.webp,
+                img/hero-photo-3-1024@2x.webp 2x
+              "
+              media="(min-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/hero-photo-3-1024.jpg,
+                img/hero-photo-3-1024@2x.jpg 2x
+              "
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="
+                img/hero-photo-3-768.webp,
+                img/hero-photo-3-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/hero-photo-3-768.jpg, img/hero-photo-3-768@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/hero-photo-3.webp, img/hero-photo-3@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="img/hero-photo-3.jpg, img/hero-photo-3@2x.jpg 2x" />
+            <img src="img/hero-photo-3-1400.jpg" alt="Фотография девушки" />
+          </picture>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2 class="about__title">О студии</h2>
+        <p class="about__descr">
+          В рамках спецификации современных стандартов, интерактивные прототипы,
+          инициированные исключительно синтетически, ограничены исключительно
+          образом мышления. Предварительные выводы неутешительны:
+          высокотехнологичная концепция общественного уклада требует от нас
+          анализа соответствующих условий активизации! Следует отметить, что
+          семантический разбор внешних противодействий фиксирует необходимость
+          распределения внутренних резервов и ресурсов. Безусловно, граница
+          обучения кадров предоставляет широкие возможности для первоочередных
+          требований. Повседневная практика показывает, что глубокий уровень
+          погружения предполагает независимые способы реализации новых принципов
+          формирования материально-&nbsp;технической и кадровой базы. Приятно,
+          граждане, наблюдать, как явные признаки институционализации являются
+          только методом политического участия и нарушающими общечеловеческие
+          нормы этики.
+        </p>
+        <picture class="about__image">
+          <source
+            srcset="img/about-photo-1400.webp, img/about-photo-1400@2x.webp 2x"
+            media="(min-width: 1400px)"
+            type="image/webp"
+          />
+          <source
+            srcset="img/about-photo-1400.jpg, img/about-photo-1400@2x.jpg 2x"
+            media="(min-width: 1400px)"
+          />
+          <source
+            srcset="img/about-photo-1024.webp, img/about-photo-1024@2x.webp 2x"
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
+          <source
+            srcset="img/about-photo-1024.jpg, img/about-photo-1024@2x.jpg 2x"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="img/about-photo-768.webp, img/about-photo-768@2x.webp 2x"
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="img/about-photo-768.jpg, img/about-photo-768@2x.jpg 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="img/about-photo.webp, img/about-photo@2x.webp 2x"
+            type="image/webp"
+          />
+          <source srcset="img/about-photo.jpg, img/about-photo@2x.jpg 2x" />
+          <img src="img/about-photo-1400.jpg" alt="Фотография девушки" />
+        </picture>
+        <form class="form about__form">
+          <h4 class="form__title">Подписаться на рассылку</h4>
+          <input
+            type="email"
+            class="form__input"
+            placeholder="E-mail"
+            aria-label="Введите ваш e-mail"
+          />
+          <button type="submit" class="form__button">Отправить</button>
+        </form>
+      </section>
+      <section class="projects" id="projects">
+        <h2 class="projects__title">Наши проекты</h2>
+        <ul class="projects__list">
+          <li class="projects__item projects__item--1">
+            <article class="project projects__card">
+              <picture class="project__image project__image--inline">
+                <source
+                  srcset="
+                    img/projects-photo-1-1400.webp,
+                    img/projects-photo-1-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1-1400.jpg,
+                    img/projects-photo-1-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1-1024.webp,
+                    img/projects-photo-1-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1-1024.jpg,
+                    img/projects-photo-1-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1-768.webp,
+                    img/projects-photo-1-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1-768.jpg,
+                    img/projects-photo-1-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1.webp,
+                    img/projects-photo-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-1.jpg,
+                    img/projects-photo-1@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-1-1400.jpg" alt="Фотография" />
+              </picture>
+              <p class="project__descr">
+                Синтетически, смешаны с не уникальными данными до степени...
+              </p>
+              <time class="project__date" datetime="2022-06-16">
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                16 июня
+              </time>
+              <div class="project__badge">#пейзаж</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--2">
+            <article class="project projects__card">
+              <picture class="project__image project__image--inline">
+                <source
+                  srcset="
+                    img/projects-photo-2-1400.webp,
+                    img/projects-photo-2-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2-1400.jpg,
+                    img/projects-photo-2-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2-1024.webp,
+                    img/projects-photo-2-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2-1024.jpg,
+                    img/projects-photo-2-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2-768.webp,
+                    img/projects-photo-2-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2-768.jpg,
+                    img/projects-photo-2-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2.webp,
+                    img/projects-photo-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-2.jpg,
+                    img/projects-photo-2@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-2-1400.jpg" alt="Фотография" />
+              </picture>
+              <p class="project__descr">
+                В своём стремлении улучшить опыт мы упускаем, что явные...
+              </p>
+              <time class="project__date" datetime="2022-05-28">
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                28 мая
+              </time>
+              <div class="project__badge">#портрет</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--3">
+            <article class="project projects__card">
+              <picture class="project__image project__image--inline">
+                <source
+                  srcset="
+                    img/projects-photo-3-1400.webp,
+                    img/projects-photo-3-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3-1400.jpg,
+                    img/projects-photo-3-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3-1024.webp,
+                    img/projects-photo-3-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3-1024.jpg,
+                    img/projects-photo-3-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3-768.webp,
+                    img/projects-photo-3-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3-768.jpg,
+                    img/projects-photo-3-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3.webp,
+                    img/projects-photo-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-3.jpg,
+                    img/projects-photo-3@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-3-1400.jpg" alt="Фотография" />
+              </picture>
+              <p class="project__descr">
+                Равным образом, высокое качество позиционных высокотехнологичная
+                концепция общественного уклада
+              </p>
+              <time class="project__date" datetime="2022-05-14">
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                14 мая
+              </time>
+              <div class="project__badge">#предмет</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--4">
+            <article class="project project--background projects__card">
+              <picture class="project__image project__image--background">
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-1400.webp,
+                    img/projects-photo-4-bg-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-1400.jpg,
+                    img/projects-photo-4-bg-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-1024.webp,
+                    img/projects-photo-4-bg-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-1024.jpg,
+                    img/projects-photo-4-bg-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-768.webp,
+                    img/projects-photo-4-bg-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg-768.jpg,
+                    img/projects-photo-4-bg-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg.webp,
+                    img/projects-photo-4-bg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-4-bg.jpg,
+                    img/projects-photo-4-bg@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-4-bg-1400.jpg" alt="Фотография" />
+              </picture>
+              <time
+                class="project__date project__date--background"
+                datetime="2022-04-09"
+              >
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                9 апреля
+              </time>
+              <h3 class="project__title">Семантический разбор</h3>
+              <p class="project__descr project__descr--background">
+                В рамках спецификации современных стандартов, интерактивные
+                прототипы
+              </p>
+              <button class="project__button">О проекте</button>
+              <div class="project__badge">#fuji</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--5">
+            <article class="project projects__card">
+              <picture class="project__image project__image--inline">
+                <source
+                  srcset="
+                    img/projects-photo-5-1400.webp,
+                    img/projects-photo-5-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5-1400.jpg,
+                    img/projects-photo-5-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5-1024.webp,
+                    img/projects-photo-5-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5-1024.jpg,
+                    img/projects-photo-5-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5-768.webp,
+                    img/projects-photo-5-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5-768.jpg,
+                    img/projects-photo-5-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5.webp,
+                    img/projects-photo-5@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-5.jpg,
+                    img/projects-photo-5@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-5-1400.jpg" alt="Фотография" />
+              </picture>
+              <p class="project__descr">
+                Как принято считать, многие известные личности и по сей день
+                остаются уделом либералов...
+              </p>
+              <time class="project__date" datetime="2022-05-28">
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                28 мая
+              </time>
+              <div class="project__badge">#ретушь</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--6">
+            <article class="project projects__card">
+              <picture class="project__image project__image--inline">
+                <source
+                  srcset="
+                    img/projects-photo-6-1400.webp,
+                    img/projects-photo-6-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6-1400.jpg,
+                    img/projects-photo-6-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6-1024.webp,
+                    img/projects-photo-6-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6-1024.jpg,
+                    img/projects-photo-6-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6-768.webp,
+                    img/projects-photo-6-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6-768.jpg,
+                    img/projects-photo-6-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6.webp,
+                    img/projects-photo-6@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-6.jpg,
+                    img/projects-photo-6@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-6-1400.jpg" alt="Фотография" />
+              </picture>
+              <p class="project__descr">
+                С учётом сложившейся международной обстановки, новая модель
+                организационной...
+              </p>
+              <time class="project__date" datetime="2022-05-14">
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                14 мая
+              </time>
+              <div class="project__badge">#портрет</div>
+            </article>
+          </li>
+          <li class="projects__item projects__item--7">
+            <article class="project project--background projects__card">
+              <picture class="project__image project__image--background">
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-1400.webp,
+                    img/projects-photo-7-bg-1400@2x.webp 2x
+                  "
+                  media="(min-width: 1400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-1400.jpg,
+                    img/projects-photo-7-bg-1400@2x.jpg 2x
+                  "
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-1024.webp,
+                    img/projects-photo-7-bg-1024@2x.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-1024.jpg,
+                    img/projects-photo-7-bg-1024@2x.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-768.webp,
+                    img/projects-photo-7-bg-768@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg-768.jpg,
+                    img/projects-photo-7-bg-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg.webp,
+                    img/projects-photo-7-bg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/projects-photo-7-bg.jpg,
+                    img/projects-photo-7-bg@2x.jpg 2x
+                  "
+                />
+                <img src="img/projects-photo-7-bg-1400.jpg" alt="Фотография" />
+              </picture>
+              <time
+                class="project__date project__date--background"
+                datetime="2022-03-20"
+              >
+                <img src="img/inline/calendar.svg" alt="Календарь" />
+                20 марта
+              </time>
+              <h3 class="project__title">Забвение</h3>
+              <p class="project__descr project__descr--background">
+                Играет важную роль в формировании глубокомысленных рассуждений
+              </p>
+              <button class="project__button">О проекте</button>
+              <div class="project__badge">#проектзабвение</div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="contacts" id="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="map contacts__map">
+          <picture class="map__image">
+            <source
+              srcset="
+                img/contacts-map-1400.webp,
+                img/contacts-map-1400@2x.webp 2x
+              "
+              media="(min-width: 1400px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/contacts-map-1400.jpg,
+                img/contacts-map-1400@2x.jpg 2x
+              "
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="
+                img/contacts-map-1024.webp,
+                img/contacts-map-1024@2x.webp 2x
+              "
+              media="(min-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                img/contacts-map-1024.jpg,
+                img/contacts-map-1024@2x.jpg 2x
+              "
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="
+                img/contacts-map-768.webp,
+                img/contacts-map-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/contacts-map-768.jpg, img/contacts-map-768@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/contacts-map.webp, img/contacts-map@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="img/contacts-map.jpg, img/contacts-map@2x.jpg 2x" />
+            <img src="img/contacts-map-1400.jpg" alt="Фотография" />
+          </picture>
+          <address class="map__info">
+            <div class="map__name">Студия "High pass"</div>
+            <span class="map__address">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза»,
+              этаж 8, офис № 82
+            </span>
+            <a href="#" class="map__tel">
+              <img src="img/inline/tel.svg" alt="Телефон" />
+              +7 (495) 42-423-532
+            </a>
+          </address>
+        </div>
+        <form class="form contacts__form">
+          <h3 class="form__title">Оставить заявку</h3>
+          <p class="form__descr">
+            Оставьте ваши данные, указав в графе “Комментарий” желаемые время и
+            дату съемки или другого мероприятия
+          </p>
+          <input
+            type="text"
+            class="form__input"
+            placeholder="Имя"
+            aria-label="Введите ваше имя"
+          />
+          <input
+            type="email"
+            class="form__input"
+            placeholder="E-mail"
+            aria-label="Введите ваш e-mail"
+          />
+          <textarea
+            class="form__textarea"
+            placeholder="Комментарий"
+            aria-label="Введите ваш комментарий"
+          ></textarea>
+          <button class="form__button">Отправить</button>
+        </form>
+      </section>
+      <footer class="footer" id="footer">
+        <div class="footer__logo">
+          <img src="img/inline/logo.svg" alt="Логотип High Pass" />
+          Фотостудия High pass® 2018-2020
+        </div>
+        <blockquote class="quote footer__quote">
+          <p class="quote__text">
+            Которая из моих фотографий самая любимая? Та,&nbsp;которую я
+            собираюсь снять завтра.
+          </p>
+          <cite class="quote__author">© Имоджен Каннингем</cite>
+        </blockquote>
+        <div class="socials footer__socials">
+          Больше интересного:
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link"
+                aria-label="Наша страница в Instagram"
+              >
+                <img
+                  src="img/inline/instagram.svg"
+                  alt="Instagram"
+                  class="socials__icon"
+                />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link"
+                aria-label="Наша страница в Facebook"
+              >
+                <img
+                  src="img/inline/facebook.svg"
+                  alt="Facebook"
+                  class="socials__icon"
+                />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link" aria-label="Наша страница в VK">
+                <img src="img/inline/vk.svg" alt="VK" class="socials__icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

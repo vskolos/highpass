@@ -1,0 +1,537 @@
+@use 'common';
+
+.header {
+
+  &__top {
+    @include common.container;
+    align-items: center;
+    padding-block: 25px;
+    background-color: common.$color-dark;
+
+    @media (min-width: 768px) {
+      padding-block: 26.5px;
+    }
+
+    @media (min-width: 1400px) {
+      padding-block: 24.5px;
+    }
+  }
+
+  .top {
+    position: relative;
+
+    &__logo {
+      align-self: center;
+      width: 112px;
+      height: 18px;
+
+      @media (min-width: 768px) {
+        grid-column: 1 / 3;
+        width: 166px;
+        height: 27px;
+      }
+
+      @media (min-width: 1400px) {
+        width: 190px;
+        height: 31px;
+      }
+    }
+
+    &__nav {
+      @media (min-width: 1024px) {
+        grid-column: 3 / 8;
+      }
+
+      @media (min-width: 1400px) {
+        grid-column: 4 / 11;
+      }
+
+      &--desktop {
+        display: none;
+
+        @media (min-width: 1024px) {
+          display: block;
+        }
+      }
+    }
+
+    .nav {
+      &__list {
+        @include common.list-reset;
+
+        @media (min-width: 1024px) {
+          display: flex;
+          gap: 33px;
+        }
+
+        @media (min-width: 1400px) {
+          justify-content: space-between;
+        }
+      }
+
+      &__link {
+        @media (min-width: 1024px) {
+          @include common.link-reset;
+          font-family: common.$font-title;
+          font-size: 16px;
+          line-height: 21px;
+          color: common.$color-white;
+          transition: color .1s ease-in-out,
+            background-color .1s ease-in-out,
+            outline .1s ease-in-out;
+        }
+
+        &:hover {
+          color: common.$color-primary;
+        }
+
+        &:focus-visible {
+          color: common.$color-white;
+          background-color: common.$color-primary-shade;
+          outline: 5px solid common.$color-primary-shade;
+          outline-offset: 0;
+        }
+
+        &:active {
+          color: common.$color-primary-dark;
+        }
+      }
+    }
+
+    &__socials {
+      display: none;
+
+      @media (min-width: 1400px) {
+        display: flex;
+        justify-self: end;
+      }
+    }
+
+    .socials {
+      @include common.list-reset;
+      @media (min-width: 1400px) {
+        grid-column: 11 / 13;
+        gap: 20px;
+      }
+
+      &__link {
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        svg {
+          display: block;
+        }
+
+        svg > path {
+          transition: fill .1s ease-in-out;
+        }
+
+        &:hover > svg > path {
+          fill: common.$color-primary;
+        }
+
+        &:focus-visible > svg > path {
+          fill: common.$color-primary-shade;
+        }
+
+        &:active > svg > path {
+          fill: common.$color-primary-dark;
+        }
+      }
+    }
+
+    &__search {
+      justify-self: end;
+      @include common.button-reset;
+
+      @media (min-width: 768px) {
+        grid-column: 6 / 7;
+      }
+
+      @media (min-width: 1024px) {
+        grid-column: 8 / 9;
+      }
+
+      @media (min-width: 1400px) {
+        display: none;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        @media (min-width: 768px) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      svg > path {
+        transition: fill .1s ease-in-out;
+      }
+
+      &:hover > svg > path {
+        fill: common.$color-primary;
+      }
+
+      &:focus-visible > svg > path {
+        fill: common.$color-primary-shade;
+      }
+
+      &:active > svg > path {
+        fill: common.$color-primary-dark;
+      }
+    }
+
+    &__searchbox {
+      position: absolute;
+      right: 21px;
+      z-index: 1;
+
+      @media (min-width: 768px) {
+        right: 27px;
+      }
+
+      @media (min-width: 1024px) {
+        right: 31px;
+      }
+    }
+
+    .searchbox {
+      padding-block: 5px;
+      display: none;
+      gap: 10px;
+      align-items: center;
+      width: calc(100% - 42px);
+      background-color: common.$color-dark;
+      animation: fadein .2s ease-in-out;
+
+      @media (min-width: 768px) {
+        width: 343px;
+      }
+
+      &--opened {
+        display: flex;
+
+        @media (min-width: 1024px) {
+          padding-left: 10px;
+        }
+
+        @media (min-width: 1400px) {
+          display: none;
+        }
+      }
+
+      &__input {
+        flex-grow: 1;
+        font-family: common.$font-title;
+        font-size: 14px;
+        line-height: 18px;
+        color: common.$color-lighter;
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid common.$color-lighter;
+        transition: border-bottom-color .1s ease-in-out;
+
+        @media (min-width: 768px) {
+          font-size: 16px;
+          line-height: 21px;
+        }
+
+        &::placeholder {
+          color: common.$color-lighter;
+        }
+
+        &:hover {
+          border-bottom-color: common.$color-primary;
+        }
+
+        &:focus-visible {
+          border-bottom-color: common.$color-primary;
+          outline: none;
+        }
+
+        &:active {
+          border-bottom-color: common.$color-primary-dark;
+        }
+      }
+
+      &__close {
+        @include common.button-reset;
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        svg {
+          display: block;
+
+          @media (min-width: 768px) {
+            width: 23px;
+            height: 23px;
+          }
+        }
+
+        svg > circle {
+          transition: fill .1s ease-in-out;
+        }
+
+        &:hover > svg > circle {
+          fill: common.$color-primary;
+        }
+
+        &:focus-visible > svg > circle {
+          fill: common.$color-primary-shade;
+        }
+
+        &:active > svg > circle {
+          fill: common.$color-primary-dark;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include common.container;
+    grid-auto-rows: max-content;
+    align-items: center;
+    padding-block: 14px 13px;
+    background-color: common.$color-gray;
+
+    @media (min-width: 768px) {
+      padding-block: 12px;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .bottom {
+    overflow: hidden;
+    height: 45px;
+    transition: height .2s ease-in-out,
+      background-color .2s ease-in-out;
+
+    &--opened {
+      position: relative;
+      gap: 15px;
+      height: calc(100vh - 70px);
+      background-color: common.$color-dark;
+      border-top: 1px solid common.$color-gray;
+
+      @media (min-width: 768px) {
+        height: auto;
+        background-color: common.$color-gray;
+        border-top: none;
+      }
+
+      .burger {
+        display: none;
+      }
+
+      .close {
+        justify-self: start;
+        display: block;
+        grid-column: 1 / 3;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        svg {
+          display: block;
+
+          @media (min-width: 768px) {
+            width: 23px;
+            height: 23px;
+          }
+        }
+
+        svg > circle {
+          transition: fill .1s ease-in-out;
+        }
+
+        &:hover > svg > circle {
+          fill: common.$color-primary;
+        }
+
+        &:focus-visible > svg > circle {
+          fill: common.$color-primary-shade;
+        }
+
+        &:active > svg > circle {
+          fill: common.$color-primary-dark;
+        }
+      }
+
+      .nav {
+        display: block;
+        grid-column: 1 / 3;
+
+        &__list {
+          @include common.list-reset;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+          }
+        }
+
+      }
+
+      .tel {
+        @include common.link-reset;
+        position: absolute;
+        top: calc(100vh - 70px - 14px - 36px);
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        grid-column: 1 / 3;
+        font-size: 14px;
+        line-height: 18px;
+        color: common.$color-primary;
+        transition: color .1s ease-in-out,
+          background-color .1s ease-in-out,
+          outline .1s ease-in-out;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+
+        &:hover {
+          color: common.$color-primary-shade;
+        }
+
+        &:focus-visible {
+          color: common.$color-white;
+          background-color: common.$color-primary-shade;
+          outline: 5px solid common.$color-primary-shade;
+          outline-offset: 0;
+        }
+
+        &:active {
+          color: common.$color-primary-dark;
+        }
+      }
+    }
+
+    &__burger {
+      justify-self: start;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .burger {
+      @include common.button-reset;
+
+      &__icon {
+        display: block;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      svg > rect {
+        transition: fill .1s ease-in-out;
+      }
+
+      &:hover > svg > rect {
+        fill: common.$color-primary;
+      }
+
+      &:focus-visible > svg > rect {
+        fill: common.$color-primary-shade;
+      }
+
+      &:active > svg > rect {
+        fill: common.$color-primary-dark;
+      }
+    }
+
+    &__close {
+      display: none;
+    }
+
+    .close {
+      @include common.button-reset;
+
+      &__icon {
+        display: block;
+      }
+    }
+
+    &__nav {
+      &--mobile {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+
+    .nav {
+      @media (min-width: 768px) {
+        grid-column: 1 / 7;
+      }
+
+      &__list {
+        @media (min-width: 768px) {
+          @include common.list-reset;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        }
+      }
+
+      &__link {
+        @include common.link-reset;
+        font-family: common.$font-title;
+        font-size: 16px;
+        line-height: 21px;
+        color: common.$color-white;
+        transition: color .1s ease-in-out,
+          background-color .1s ease-in-out,
+          outline .1s ease-in-out;
+
+        &:hover {
+          color: common.$color-primary;
+        }
+
+        &:focus-visible {
+          color: common.$color-white;
+          background-color: common.$color-primary-shade;
+          outline: 5px solid common.$color-primary-shade;
+          outline-offset: 0;
+        }
+
+        &:active {
+          color: common.$color-primary-dark;
+        }
+      }
+    }
+
+    &__tel {
+      display: none;
+    }
+  }
+
+}
